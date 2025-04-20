@@ -41,7 +41,7 @@ export class GameManager {
                 const game = this.games.find(game => game.player1 === socket || game.player2 === socket);
                 if (game) {
                     // Process the move in the game
-                    game.processMove(socket ,  message.data);
+                    game.makeMove(socket ,  message.move);
                 }
                }
             } 
