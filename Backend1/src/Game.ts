@@ -34,9 +34,6 @@ export class Game {
         to :string,
     }) {
 
-        console.log("make move working")
-        // Validate the move using ZOD
-
         if(this.moveCount % 2 === 0 && socket !== this.player1) {
             return;
         }
@@ -65,28 +62,19 @@ export class Game {
                 }}));
            return;
         }
-        console.log("here1")
 
         if(this.moveCount % 2 === 0){
-            console.log("here2")
             this.player2.send(JSON.stringify({
                 type : MOVE,
                 payload : move
             }))
         }else {
-            console.log("here3")
             this.player1.send(JSON.stringify({
                 type : MOVE,
                 payload : move
             }))
         }
 
-        //Uodate the board
-        // Push the move 
-
-        // Check if the game is over
-
-        // Send the updated board to both players
         this.moveCount++;
 
     }
