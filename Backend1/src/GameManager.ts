@@ -36,10 +36,16 @@ export class GameManager {
                     this.pendingUsers = socket ;
                }
 
+               console.log("MOVE HAPPENING ?")
+
+
                if(message.type === MOVE) {
+
+                console.log("MOVE cdz ?")
                 // Handle move message
                 const game = this.games.find(game => game.player1 === socket || game.player2 === socket);
                 if (game) {
+                    console.log("MOVE proceeded")
                     // Process the move in the game
                     game.makeMove(socket ,  message.move);
                 }
