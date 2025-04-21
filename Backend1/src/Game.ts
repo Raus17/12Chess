@@ -48,8 +48,6 @@ export class Game {
             console.error(e)
             return;
         }   
-
-        console.log("make move working 2")
         
         if(this.Board.isGameOver()) {
             this.player1.send(JSON.stringify({type: GAME_OVER ,
