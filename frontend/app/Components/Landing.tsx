@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { useRouter } from 'next/navigation'
+import { Button } from './Button'
 
 const Landing = () => {
   const router = useRouter();
@@ -16,11 +17,10 @@ const Landing = () => {
                 <h1 className='text-4xl font-bold text-white'>Play Chess online on the site</h1>
               </div>
                 <div className='mt-8 flex justify-center'>
-                  <button
+                  <Button
                   onClick={()=> router.push('/game')}
-                  className=' px-8 py-4 bg-green-500 hover:bg-green-700 text-white font-bold  rounded justify-between'
                   >
-                    PLAY ONLINE</button>
+                    PLAY ONLINE</Button>
                 </div>
             </div>
           </div>
